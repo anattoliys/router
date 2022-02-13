@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 04022022-init
+      author: Anatoliy Salko
+      changes:
+        - createTable:
+            tableName: rules
+            columns:
+              - column: { name: id, type: bigint, autoIncrement: true, constraints: { primaryKey: true, nullable: false, defaultValue: nextval(rule_id_seq) } }
+              - column: { name: name, type: varchar, constraints: { nullable: false } }
+              - column: { name: url, type: varchar, constraints: { nullable: false } }
+        - createTable:
+            tableName: parameters
+            columns:
+              - column: { name: id, type: bigint, autoIncrement: true, constraints: { primaryKey: true, nullable: false, defaultValue: nextval(parameter_id_seq) } }
+              - column: { name: name, type: varchar, constraints: { nullable: false } }
+              - column: { name: type, type: varchar, constraints: { nullable: false, defaultValue: 'STRING' } }
+              - column: { name: description, type: varchar }
+              - column: { name: rank, type: integer }
+        - createTable:
+            tableName: rule_parameters
+            columns:
+              - column: { name: id, type: bigint, autoIncrement: true, constraints: { primaryKey: true, nullable: false, defaultValue: nextval(rule_parameters_id_seq) } }
+              - column: { name: rule_id, type: bigint, constraints: { nullable: false, foreignKeyName: fk_rule_parameters_rule_id, references: rules(id), deleteCascade: true } }
+              - column: { name: parameter_id, type: bigint, constraints: { nullable: false, foreignKeyName: fk_rule_parameters_parameter_id, references: parameters(id) } }
+              - column: { name: parameter_value, type: varchar, constraints: { nullable: false } }
+              - column: { name: comparison_type, type: varchar, constraints: { nullable: false } }

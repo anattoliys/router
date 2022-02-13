@@ -1,0 +1,255 @@
+databaseChangeLog:
+  - changeSet:
+      id: 04022022-insert
+      author: Anatoliy Salko
+      changes:
+        - insert:
+            tableName:  rules
+            columns:
+              - column: { name: name , value: 'переход 1' }
+              - column: { name: url, value: '/web/1' }
+        - insert:
+            tableName: rules
+            columns:
+              - column: { name: name, value: 'переход 2' }
+              - column: { name: url, value: '/web/2' }
+        - insert:
+            tableName: rules
+            columns:
+              - column: { name: name, value: 'переход 3' }
+              - column: { name: url, value: '/web/3' }
+        - insert:
+            tableName: rules
+            columns:
+              - column: { name: name, value: 'переход 4' }
+              - column: { name: url, value: '/web/4' }
+        - insert:
+            tableName: rules
+            columns:
+              - column: { name: name, value: 'переход 5' }
+              - column: { name: url, value: '/web/5' }
+        - insert:
+            tableName: rules
+            columns:
+              - column: { name: name, value: 'переход 6' }
+              - column: { name: url, value: '/web/6' }
+        - insert:
+            tableName: rules
+            columns:
+              - column: { name: name, value: 'переход 7' }
+              - column: { name: url, value: '/web/7' }
+        - insert:
+            tableName: rules
+            columns:
+              - column: { name: name, value: 'переход 8' }
+              - column: { name: url, value: '/web/8' }
+        - insert:
+            tableName: parameters
+            columns:
+              - column: { name: name , value: 'a' }
+              - column: { name: type, value: 'STRING' }
+              - column: { name: description, value: 'Параметр «а»' }
+              - column: { name: rank, value: '1' }
+        - insert:
+            tableName: parameters
+            columns:
+              - column: { name: name , value: 'b' }
+              - column: { name: type, value: 'STRING' }
+              - column: { name: description, value: 'Параметр «b»' }
+              - column: { name: rank, value: '2' }
+        - insert:
+            tableName: parameters
+            columns:
+              - column: { name: name , value: 'c' }
+              - column: { name: type, value: 'BOOLEAN' }
+              - column: { name: description, value: 'Параметр «c»' }
+              - column: { name: rank, value: '3' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '1' }
+              - column: { name: parameter_id, value: '1' }
+              - column: { name: parameter_value, value: 'all' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '2' }
+              - column: { name: parameter_id, value: '1' }
+              - column: { name: parameter_value, value: 'all' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '3' }
+              - column: { name: parameter_id, value: '1' }
+              - column: { name: parameter_value, value: 'all' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '4' }
+              - column: { name: parameter_id, value: '1' }
+              - column: { name: parameter_value, value: 'all' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '5' }
+              - column: { name: parameter_id, value: '1' }
+              - column: { name: parameter_value, value: 'all' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '6' }
+              - column: { name: parameter_id, value: '1' }
+              - column: { name: parameter_value, value: 'all' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '7' }
+              - column: { name: parameter_id, value: '1' }
+              - column: { name: parameter_value, value: 'all' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '8' }
+              - column: { name: parameter_id, value: '1' }
+              - column: { name: parameter_value, value: 'all' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '1' }
+              - column: { name: parameter_id, value: '2' }
+              - column: { name: parameter_value, value: '1' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '2' }
+              - column: { name: parameter_id, value: '2' }
+              - column: { name: parameter_value, value: '27' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '3' }
+              - column: { name: parameter_id, value: '2' }
+              - column: { name: parameter_value, value: '101' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '4' }
+              - column: { name: parameter_id, value: '2' }
+              - column: { name: parameter_value, value: '100' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '5' }
+              - column: { name: parameter_id, value: '2' }
+              - column: { name: parameter_value, value: '21' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '6' }
+              - column: { name: parameter_id, value: '2' }
+              - column: { name: parameter_value, value: '777' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '7' }
+              - column: { name: parameter_id, value: '2' }
+              - column: { name: parameter_value, value: '5' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '7' }
+              - column: { name: parameter_id, value: '2' }
+              - column: { name: parameter_value, value: '20' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '7' }
+              - column: { name: parameter_id, value: '2' }
+              - column: { name: parameter_value, value: '7' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '7' }
+              - column: { name: parameter_id, value: '2' }
+              - column: { name: parameter_value, value: '41' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '8' }
+              - column: { name: parameter_id, value: '2' }
+              - column: { name: parameter_value, value: '40' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '1' }
+              - column: { name: parameter_id, value: '3' }
+              - column: { name: parameter_value, value: '1' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '2' }
+              - column: { name: parameter_id, value: '3' }
+              - column: { name: parameter_value, value: '1' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '3' }
+              - column: { name: parameter_id, value: '3' }
+              - column: { name: parameter_value, value: '1' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '4' }
+              - column: { name: parameter_id, value: '3' }
+              - column: { name: parameter_value, value: 'all' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '5' }
+              - column: { name: parameter_id, value: '3' }
+              - column: { name: parameter_value, value: 'all' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '6' }
+              - column: { name: parameter_id, value: '3' }
+              - column: { name: parameter_value, value: 'all' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '7' }
+              - column: { name: parameter_id, value: '3' }
+              - column: { name: parameter_value, value: 'all' }
+              - column: { name: comparison_type, value: 'EQUAL' }
+        - insert:
+            tableName: rule_parameters
+            columns:
+              - column: { name: rule_id , value: '8' }
+              - column: { name: parameter_id, value: '3' }
+              - column: { name: parameter_value, value: 'all' }
+              - column: { name: comparison_type, value: 'EQUAL' }

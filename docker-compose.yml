@@ -1,0 +1,35 @@
+version: "3.9"
+services:
+  service:
+    container_name: service
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/router
+    ports:
+      - "8082:8082"
+    depends_on:
+      - postgres
+    networks:
+      - service
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: router
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    networks:
+      - service
+
+networks:
+  service:
+    driver: bridge
+
+volumes:
+  postgres:
